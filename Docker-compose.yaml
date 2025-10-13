@@ -1,0 +1,12 @@
+services:
+  onedocker:
+    build:
+      context: One
+      dockerfile: Dockerfile
+
+  twodocker:
+    build:
+      context: Two
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
