@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package score;
+
+option go_package = "github.com/HamsterNiki/test-grpc-with-docker";
+
+service score{
+    rpc UpdScore (ScoreRequest) returns (ScoreResponse);
+}
+
+message ScoreRequest{
+    int64 score = 1;
+}
+
+message ScoreResponse{
+    int64 score = 1;
+}
